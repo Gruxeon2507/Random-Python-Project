@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Blind SQL injection with conditional errors/.idea/Blind SQL injection with conditional errors.iml" filepath="$PROJECT_DIR$/../Blind SQL injection with conditional errors/.idea/Blind SQL injection with conditional errors.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../BlindSQLInjectionWithTimeDelay/.idea/BlindSQLInjectionWithTimeDelay.iml" filepath="$PROJECT_DIR$/../BlindSQLInjectionWithTimeDelay/.idea/BlindSQLInjectionWithTimeDelay.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/SQLInjectionAttackRetriveDataFromOtherTable.iml" filepath="$PROJECT_DIR$/.idea/SQLInjectionAttackRetriveDataFromOtherTable.iml" />
     </modules>
   </component>

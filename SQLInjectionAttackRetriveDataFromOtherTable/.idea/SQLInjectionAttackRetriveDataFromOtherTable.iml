@@ -6,5 +6,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="BlindSQLInjectionWithTimeDelay" />
+    <orderEntry type="module" module-name="Blind SQL injection with conditional errors" />
   </component>
 </module>

