@@ -1,0 +1,44 @@
+[[92mpagespeed-detect[0m] [[94mhttp[0m] [[34minfo[0m] http://pp.funix.edu.vn
+[[92mapache-detect[0m] [[94mhttp[0m] [[34minfo[0m] http://pp.funix.edu.vn [[96mApache[0m]
+[[92mopenresty-detect[0m] [[94mhttp[0m] [[34minfo[0m] https://hocmai.funix.edu.vn
+[[92mweak-cipher-suites[0m] [[94mssl[0m] [[33mmedium[0m] pp.funix.edu.vn:443 [[96m[tls10 TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA][0m]
+[[92mweak-cipher-suites[0m] [[94mssl[0m] [[33mmedium[0m] pp.funix.edu.vn:443 [[96m[tls11 TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA][0m]
+[[92mtech-detect[0m:[1;92mgoogle-font-api[0m] [[94mhttp[0m] [[34minfo[0m] http://pp.funix.edu.vn
+[[92mtech-detect[0m:[1;92mgoogle-font-api[0m] [[94mhttp[0m] [[34minfo[0m] https://hocmai.funix.edu.vn
+[[92mssl-dns-names[0m] [[94mssl[0m] [[34minfo[0m] pp.funix.edu.vn:443 [[96m*.funix.edu.vn[0m,[96mfunix.edu.vn[0m]
+[[92mssl-issuer[0m] [[94mssl[0m] [[34minfo[0m] pp.funix.edu.vn:443 [[96mDigiCert Inc[0m]
+[[92mexpired-ssl[0m] [[94mssl[0m] [[32mlow[0m] pp.funix.edu.vn:443 [[96m2023-02-22 23:59:59 +0000 UTC[0m]
+[[92mrevoked-ssl-certificate[0m] [[94mssl[0m] [[32mlow[0m] pp.funix.edu.vn:443
+[[92mhttp-missing-security-headers[0m:[1;92mpermissions-policy[0m] [[94mhttp[0m] [[34minfo[0m] http://pp.funix.edu.vn
+[[92mhttp-missing-security-headers[0m:[1;92mx-content-type-options[0m] [[94mhttp[0m] [[34minfo[0m] http://pp.funix.edu.vn
+[[92mhttp-missing-security-headers[0m:[1;92mcross-origin-opener-policy[0m] [[94mhttp[0m] [[34minfo[0m] http://pp.funix.edu.vn
+[[92mhttp-missing-security-headers[0m:[1;92mstrict-transport-security[0m] [[94mhttp[0m] [[34minfo[0m] http://pp.funix.edu.vn
+[[92mhttp-missing-security-headers[0m:[1;92mcontent-security-policy[0m] [[94mhttp[0m] [[34minfo[0m] http://pp.funix.edu.vn
+[[92mhttp-missing-security-headers[0m:[1;92mclear-site-data[0m] [[94mhttp[0m] [[34minfo[0m] http://pp.funix.edu.vn
+[[92mhttp-missing-security-headers[0m:[1;92mcross-origin-embedder-policy[0m] [[94mhttp[0m] [[34minfo[0m] http://pp.funix.edu.vn
+[[92mhttp-missing-security-headers[0m:[1;92mcross-origin-resource-policy[0m] [[94mhttp[0m] [[34minfo[0m] http://pp.funix.edu.vn
+[[92mhttp-missing-security-headers[0m:[1;92mx-permitted-cross-domain-policies[0m] [[94mhttp[0m] [[34minfo[0m] http://pp.funix.edu.vn
+[[92mhttp-missing-security-headers[0m:[1;92mreferrer-policy[0m] [[94mhttp[0m] [[34minfo[0m] http://pp.funix.edu.vn
+[[92mhttp-missing-security-headers[0m:[1;92mcross-origin-resource-policy[0m] [[94mhttp[0m] [[34minfo[0m] https://hocmai.funix.edu.vn
+[[92mhttp-missing-security-headers[0m:[1;92mcontent-security-policy[0m] [[94mhttp[0m] [[34minfo[0m] https://hocmai.funix.edu.vn
+[[92mhttp-missing-security-headers[0m:[1;92mpermissions-policy[0m] [[94mhttp[0m] [[34minfo[0m] https://hocmai.funix.edu.vn
+[[92mhttp-missing-security-headers[0m:[1;92mx-frame-options[0m] [[94mhttp[0m] [[34minfo[0m] https://hocmai.funix.edu.vn
+[[92mhttp-missing-security-headers[0m:[1;92mreferrer-policy[0m] [[94mhttp[0m] [[34minfo[0m] https://hocmai.funix.edu.vn
+[[92mhttp-missing-security-headers[0m:[1;92mclear-site-data[0m] [[94mhttp[0m] [[34minfo[0m] https://hocmai.funix.edu.vn
+[[92mhttp-missing-security-headers[0m:[1;92mcross-origin-opener-policy[0m] [[94mhttp[0m] [[34minfo[0m] https://hocmai.funix.edu.vn
+[[92mhttp-missing-security-headers[0m:[1;92mstrict-transport-security[0m] [[94mhttp[0m] [[34minfo[0m] https://hocmai.funix.edu.vn
+[[92mhttp-missing-security-headers[0m:[1;92mx-content-type-options[0m] [[94mhttp[0m] [[34minfo[0m] https://hocmai.funix.edu.vn
+[[92mhttp-missing-security-headers[0m:[1;92mx-permitted-cross-domain-policies[0m] [[94mhttp[0m] [[34minfo[0m] https://hocmai.funix.edu.vn
+[[92mhttp-missing-security-headers[0m:[1;92mcross-origin-embedder-policy[0m] [[94mhttp[0m] [[34minfo[0m] https://hocmai.funix.edu.vn
+[[92mssl-dns-names[0m] [[94mssl[0m] [[34minfo[0m] hocmai.funix.edu.vn:443 [[96mhocmai.funix.edu.vn[0m]
+[[92mssl-issuer[0m] [[94mssl[0m] [[34minfo[0m] hocmai.funix.edu.vn:443 [[96mZeroSSL[0m]
+[[92msecmail-detect[0m] [[94mhttp[0m] [[34minfo[0m] https://hocmai.funix.edu.vn/SecMail/login.jsp
+[[92mtls-version[0m] [[94mssl[0m] [[34minfo[0m] pp.funix.edu.vn:443 [[96mtls10[0m]
+[[92mtls-version[0m] [[94mssl[0m] [[34minfo[0m] pp.funix.edu.vn:443 [[96mtls11[0m]
+[[92mtls-version[0m] [[94mssl[0m] [[34minfo[0m] pp.funix.edu.vn:443 [[96mtls12[0m]
+[[92mtls-version[0m] [[94mssl[0m] [[34minfo[0m] hocmai.funix.edu.vn:443 [[96mtls12[0m]
+[[92mdeprecated-tls[0m] [[94mssl[0m] [[34minfo[0m] pp.funix.edu.vn:443 [[96mtls10[0m]
+[[92mdeprecated-tls[0m] [[94mssl[0m] [[34minfo[0m] pp.funix.edu.vn:443 [[96mtls11[0m]
+[[92mrobots-txt-endpoint[0m] [[94mhttp[0m] [[34minfo[0m] https://hocmai.funix.edu.vn/robots.txt
+[[92mwaf-detect[0m:[1;92mapachegeneric[0m] [[94mhttp[0m] [[34minfo[0m] http://pp.funix.edu.vn/
+[[92mfavicon-detect[0m:[1;92mbitnami[0m] [[94mhttp[0m] [[34minfo[0m] http://pp.funix.edu.vn/favicon.ico [[93mpath[0m=[93m"images/"[0m]
